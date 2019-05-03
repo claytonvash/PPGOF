@@ -7,13 +7,13 @@ public class Principal {
  
  public static void main(String[] args) throws IOException {
   Map<String, Object> mapa = new HashMap<>();
-  mapa.put("nome", "Leonam");
-  mapa.put("idade", 32);
+  mapa.put("nome", "Clayton");
+  mapa.put("idade", 39);
   
-  GeradorArquivo gerador = new ProcessaPropriedadesCriptografado();
+  GeradorArquivo gerador = new GeradorArquivoPropriedadesCriptografado();
   gerador.gerarArquivo("c:\\Gerador\\Cripto.txt", mapa);
   
-  GeradorArquivo gerador1 = new ProcessaXmlCompactado();
+  GeradorArquivo gerador1 = new GeradorArquivoXmlCompactado();
   gerador1.gerarArquivo("c:\\Gerador\\XML.zip", mapa);  
  }
 

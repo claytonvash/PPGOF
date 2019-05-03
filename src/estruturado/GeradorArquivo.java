@@ -25,11 +25,9 @@ public abstract class GeradorArquivo {
   fileout.write(bytes);
   fileout.close();
  }
- public String gerarConteudo(Map<String,Object> propriedades) {
-	 return "";
-	 
- }
- public byte[] processaConteudo(byte[] conteudo) throws IOException{
+ protected abstract String gerarConteudo(Map<String,Object> propriedades);
+ 
+ protected byte[] processaConteudo(byte[] conteudo) throws IOException{
 	 return conteudo;
  }
  
