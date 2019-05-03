@@ -27,8 +27,4 @@ public abstract class GeradorArquivo {
  }
  protected abstract String gerarConteudo(Map<String,Object> propriedades);
  
- protected byte[] processaConteudo(byte[] conteudo) throws IOException{
-	 return conteudo;
- }
- 
 }

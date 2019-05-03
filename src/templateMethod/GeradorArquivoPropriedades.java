@@ -2,7 +2,7 @@ package templateMethod;
 
 import java.util.Map;
 
-public class GeradorArquivoPropriedadesCriptografado extends GeradorArquivo {
+public class GeradorArquivoPropriedades extends GeradorArquivo {
 @Override
 protected String gerarConteudo(Map<String,Object> propriedades) {
 	//gera properties
@@ -12,15 +12,5 @@ protected String gerarConteudo(Map<String,Object> propriedades) {
 		   }
 		  return propFileBuilder.toString();
 }
-@Override
-protected byte[] processaConteudo(byte[] bytes) {
-	//criptografa
-	   byte[] newBytes = new byte[bytes.length];
-	   for (int i = 0; i<bytes.length;i++) {
-	    newBytes[i] = (byte)((bytes[i]+10) % Byte.MAX_VALUE);
-	   }
-	   return newBytes;
-}
-
 
 }
