@@ -7,8 +7,8 @@ import java.util.Map;
 public class GeradorArquivo {
  
  public final void gerarArquivo(String nome, Map<String,Object> propriedades, String tipo) throws IOException {
-  byte[] bytes = null;
-  if (tipo.equals("PROPRIEDADES_CRIPTOGRAFADO")) {
+  
+ /* if (tipo.equals("PROPRIEDADES_CRIPTOGRAFADO")) {
 	  ProcessaPropriedadesCriptografado propCript = new ProcessaPropriedadesCriptografado();
    
    bytes = propCript.processaPropriedadesCriptografado(propriedades);
@@ -18,10 +18,19 @@ public class GeradorArquivo {
    bytes = xml.processaXmlCompactado(propriedades);
   } else {
    System.out.println("Desconheço essa opção");
-  }
+  }*/
+  String conteudo = gerarConteudo(propriedades);
+  byte[] bytes = processaConteudo(conteudo.getBytes());
   FileOutputStream fileout = new FileOutputStream(nome);
   fileout.write(bytes);
   fileout.close();
+ }
+ public String gerarConteudo(Map<String,Object> propriedades) {
+	 return "";
+	 
+ }
+ public byte[] processaConteudo(byte[] conteudo) {
+	 return conteudo;
  }
  
 }
