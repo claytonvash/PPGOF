@@ -3,6 +3,10 @@ package templateMethod;
 import java.util.Map;
 
 public class GeradorArquivoPropriedades extends GeradorArquivo {
+	
+	public GeradorArquivoPropriedades(Processador processador) {
+		super(processador);
+	}
 @Override
 protected String gerarConteudo(Map<String,Object> propriedades) {
 	//gera properties

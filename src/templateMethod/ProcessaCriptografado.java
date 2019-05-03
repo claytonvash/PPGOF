@@ -1,6 +1,6 @@
 package templateMethod;
 
-public class ProcessaCriptografado {
+public class ProcessaCriptografado implements Processador{
 	@Override
 	public byte[] processaConteudo(byte[] bytes) {
 		//criptografa

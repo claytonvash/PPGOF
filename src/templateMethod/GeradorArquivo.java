@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.util.Map;
 
 public abstract class GeradorArquivo {
+	private Processador processador;
+	public GeradorArquivo(Processador processador) {
+		this.processador = processador;
+	}
  
  public final void gerarArquivo(String nome, Map<String,Object> propriedades) throws IOException {
   
@@ -20,7 +24,7 @@ public abstract class GeradorArquivo {
    System.out.println("Desconheço essa opção");
   }*/
   String conteudo = gerarConteudo(propriedades);
-  byte[] bytes = processaConteudo(conteudo.getBytes());
+  byte[] bytes = processador.processaConteudo(conteudo.getBytes());
   FileOutputStream fileout = new FileOutputStream(nome);
   fileout.write(bytes);
   fileout.close();

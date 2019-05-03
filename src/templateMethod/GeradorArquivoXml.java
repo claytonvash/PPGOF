@@ -3,6 +3,9 @@ package templateMethod;
 import java.util.Map;
 
 public class GeradorArquivoXml extends GeradorArquivo {
+	public GeradorArquivoXml(Processador processador) {
+		super(processador);
+	}
 	
 		 
 	@Override
