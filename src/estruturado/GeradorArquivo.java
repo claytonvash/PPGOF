@@ -4,9 +4,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Map;
 
-public class GeradorArquivo {
+public abstract class GeradorArquivo {
  
- public final void gerarArquivo(String nome, Map<String,Object> propriedades, String tipo) throws IOException {
+ public final void gerarArquivo(String nome, Map<String,Object> propriedades) throws IOException {
   
  /* if (tipo.equals("PROPRIEDADES_CRIPTOGRAFADO")) {
 	  ProcessaPropriedadesCriptografado propCript = new ProcessaPropriedadesCriptografado();
@@ -29,7 +29,7 @@ public class GeradorArquivo {
 	 return "";
 	 
  }
- public byte[] processaConteudo(byte[] conteudo) {
+ public byte[] processaConteudo(byte[] conteudo) throws IOException{
 	 return conteudo;
  }
  
