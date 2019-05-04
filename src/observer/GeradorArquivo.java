@@ -41,6 +41,9 @@ public abstract class GeradorArquivo {
 	 }
 	 
  }
+ public void addObservador (Observador observador){
+	 this.observadores.add(observador);
+ }
  protected abstract String gerarConteudo(Map<String,Object> propriedades);
  
 }
