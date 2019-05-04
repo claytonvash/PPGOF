@@ -9,7 +9,7 @@ public class LogBO implements Observador {
 		try {
 			logDao.salvarLog(log);
 		} catch (Exception e) {
-			// TODO: handle exception
+		
 		} 
 			
 	}
