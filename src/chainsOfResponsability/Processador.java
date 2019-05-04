@@ -10,7 +10,7 @@ public abstract class Processador {
 		this.proximoProcessador = proximoProcessador;
 	}
 	public Processador() {
-		this.proximoProcessador = new ProcessaDefault(null);
+		this.proximoProcessador = null;
 		
 	}
 	public byte[] processarCadeia(byte[] bytes) throws IOException{
